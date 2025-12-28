@@ -1,20 +1,40 @@
-# What is Machine Learning?
+---
+layout: default
+title: What is Machine Learning? - Interactive Overview
+---
 
-> **Interactive Overview** - Explore ML concepts through our Gamma site  
-> [View Interactive Site →](https://msbte-ml-61uo5hn.gamma.site/)
+<div class="hero" style="text-align: center; margin-bottom: var(--space-2xl);">
+  <h1>What is Machine Learning?</h1>
+  <p class="subtitle">Interactive Visual Overview of ML Concepts</p>
+  <div style="margin-top: var(--space-xl);">
+    <a href="https://msbte-ml-61uo5hn.gamma.site/" class="btn btn-primary" target="_blank">
+      <i class="fas fa-external-link-alt"></i> Open Interactive Site
+    </a>
+  </div>
+</div>
 
 ---
 
-## 📊 ML Overview from Gamma Site
+## 📊 Embedded Gamma Site
 
-<iframe src="https://msbte-ml-61uo5hn.gamma.site/" style="width: 100%; height: 800px; border: none; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" title="Machine Learning Overview - Gamma Site"></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); margin-bottom: var(--space-2xl);">
+  <iframe src="https://msbte-ml-61uo5hn.gamma.site/" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;" title="Machine Learning Overview - Gamma Site" allowfullscreen></iframe>
+</div>
 
 ---
 
-## 🔗 Direct Link
+## 🌐 Direct Access
 
-If the embedded view isn't working, visit directly:  
-**[Open Gamma Site →](https://msbte-ml-61uo5hn.gamma.site/)**
+If you prefer to open in a new window or the embedded view isn't loading:
+
+<div style="text-align: center; padding: var(--space-xl); background-color: var(--light); border-radius: var(--radius-lg); margin-bottom: var(--space-2xl);">
+  <p style="font-size: 1.125rem; margin-bottom: var(--space-md);">
+    <strong>https://msbte-ml-61uo5hn.gamma.site/</strong>
+  </p>
+  <a href="https://msbte-ml-61uo5hn.gamma.site/" class="btn btn-primary" target="_blank" style="display: inline-block;">
+    <i class="fas fa-globe"></i> Visit Gamma Site
+  </a>
+</div>
 
 ---
 
