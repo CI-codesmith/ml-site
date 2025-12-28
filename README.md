@@ -11,11 +11,13 @@
 
 | Section | Description | Links |
 |---------|-------------|-------|
+| 🌍 **What is ML?** | Interactive overview with Gamma site | [Explore Now](what-is-ml.md) |
 | 📚 **Units** | 5 complete units with comprehensive theory | [Unit 1](units/unit-1/) \| [Unit 2](units/unit-2/) \| [Unit 3](units/unit-3/) \| [Unit 4](units/unit-4/) \| [Unit 5](units/unit-5/) |
 | 🧪 **Practicals** | 15 hands-on laboratory exercises | [Practical 1](practicals/practical-1/) → [Practical 15](practicals/practical-15/) |
 | 📋 **Assessments** | 5 weekly tests, 2 class tests, 2 prelims | [View Assessments](assessments/) |
 | 📖 **Resources** | Setup guides, quick reference, FAQ | [Setup Guide](resources/installation-guide.md) \| [Quick Start](resources/quick-start.md) |
 | 📝 **Complete Notes** | All theory in one document | [Theory Notes](THEORY_NOTES.md) |
+| 🔗 **Custom Domain** | Add your own domain | [Setup Guide](CUSTOM_DOMAIN.md) |
 
 ---
 
