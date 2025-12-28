@@ -1,0 +1,46 @@
+# GitHub Pages Configuration
+
+# Site settings
+title: Machine Learning Course (K-SCHEME 316316)
+description: Complete MSBTE machine learning curriculum with theory, practicals, and assessments
+url: "https://CI-codesmith.github.io/ml-site"
+baseurl: "/ml-site"
+
+# Author
+author:
+  name: ChatakeInnoWorks
+  email: contact@chatakeinnoworks.com
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Exclude from processing
+exclude:
+  - .git
+  - .gitignore
+  - .jekyll-cache
+  - node_modules
+  - vendor
+  - README_original.md
+
+# Collections
+collections:
+  units:
+    output: true
+  practicals:
+    output: true
+
+# Gems/Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# SEO
+social:
+  name: ML Course
+  links:
+    - https://github.com/CI-codesmith/ml-site
+
+# Analytics (optional)
+# google_analytics: UA-XXXXXXXXX-X
