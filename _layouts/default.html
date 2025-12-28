@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ site.description }}">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="{{ '/' | relative_url }}" class="logo">
+            <i class="fas fa-brain"></i>
+            <span>ML Course</span>
+          </a>
+        </div>
+        <ul class="navbar-menu">
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/units/' | relative_url }}">Units</a></li>
+          <li><a href="{{ '/practicals/' | relative_url }}">Practicals</a></li>
+          <li><a href="{{ '/assessments/' | relative_url }}">Assessments</a></li>
+          <li><a href="{{ '/resources/' | relative_url }}">Resources</a></li>
+          <li><a href="https://github.com/CI-codesmith/ml-site" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>ML Course</h4>
+            <p>MSBTE K-SCHEME 316316 - Complete Learning Platform</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="{{ '/units/' | relative_url }}">Units</a></li>
+              <li><a href="{{ '/practicals/' | relative_url }}">Practicals</a></li>
+              <li><a href="{{ '/assessments/' | relative_url }}">Assessments</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="{{ '/resources/installation-guide.md' | relative_url }}">Setup Guide</a></li>
+              <li><a href="{{ '/THEORY_NOTES.md' | relative_url }}">Theory Notes</a></li>
+              <li><a href="{{ '/SYLLABUS.md' | relative_url }}">Syllabus</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 ChatakeInnoWorks | MSBTE K-SCHEME 316316 | <a href="https://github.com/CI-codesmith/ml-site">View on GitHub</a></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
