@@ -15,24 +15,22 @@ title: What is Machine Learning? - Interactive Overview
 
 ---
 
-## 📊 Embedded Gamma Site
+## 🌐 Interactive Gamma Presentation
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); margin-bottom: var(--space-2xl);">
-  <iframe src="https://msbte-ml-61uo5hn.gamma.site/" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;" title="Machine Learning Overview - Gamma Site" allowfullscreen></iframe>
-</div>
-
----
-
-## 🌐 Direct Access
-
-If you prefer to open in a new window or the embedded view isn't loading:
-
-<div style="text-align: center; padding: var(--space-xl); background-color: var(--light); border-radius: var(--radius-lg); margin-bottom: var(--space-2xl);">
-  <p style="font-size: 1.125rem; margin-bottom: var(--space-md);">
-    <strong>https://msbte-ml-61uo5hn.gamma.site/</strong>
+<div style="text-align: center; padding: var(--space-2xl); background: linear-gradient(135deg, rgba(0, 102, 204, 0.1) 0%, rgba(0, 102, 204, 0.05) 100%); border-radius: var(--radius-lg); margin-bottom: var(--space-2xl); border: 2px solid var(--primary-light);">
+  <h3 style="margin-top: 0; color: var(--dark);">Experience Interactive ML Concepts</h3>
+  <p style="color: #6b7280; margin-bottom: var(--space-xl);">
+    Explore machine learning visually with our Gamma interactive presentation
   </p>
-  <a href="https://msbte-ml-61uo5hn.gamma.site/" class="btn btn-primary" target="_blank" style="display: inline-block;">
-    <i class="fas fa-globe"></i> Visit Gamma Site
+  
+  <div style="font-size: 1.25rem; font-weight: 600; margin-bottom: var(--space-lg); word-break: break-all;">
+    <a href="https://msbte-ml-61uo5hn.gamma.site/" target="_blank" style="color: var(--primary); text-decoration: underline;">
+      https://msbte-ml-61uo5hn.gamma.site/
+    </a>
+  </div>
+  
+  <a href="https://msbte-ml-61uo5hn.gamma.site/" class="btn btn-primary" target="_blank">
+    <i class="fas fa-external-link-alt"></i> Open Gamma Site
   </a>
 </div>
 
