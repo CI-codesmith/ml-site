@@ -3,13 +3,14 @@ layout: default
 title: What is Machine Learning? - PPT
 ---
 
-# What is Machine Learning? (PPT)
 
-Below you can view or download the official presentation for "What is Machine Learning?"
+# What is Machine Learning? (Presentation)
 
-<iframe src="/assets/ppt/What-is-Machine-Learning.pptx" width="100%" height="600px" style="border: none;"></iframe>
+Below you can view or download the official PDF presentation for "What is Machine Learning?"
 
-[Download the PPT](/assets/ppt/What-is-Machine-Learning.pptx)
+<iframe src="/assets/ppt/What-is-Machine-Learning.pdf" width="100%" height="700px" style="border: none;"></iframe>
+
+[Download the PDF](/assets/ppt/What-is-Machine-Learning.pdf)
 
 ---
 

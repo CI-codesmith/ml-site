@@ -18,9 +18,10 @@ title: What is Machine Learning? - Interactive Overview
 
 ## 📊 Official Presentation (PPT)
 
+
 <div style="text-align: center; margin-bottom: var(--space-xl);">
   <a href="/what-is-ml-ppt.md" class="btn btn-secondary" target="_blank">
-    <i class="fas fa-file-powerpoint"></i> View PPT: What is Machine Learning?
+    <i class="fas fa-file-pdf"></i> View PDF: What is Machine Learning?
   </a>
 </div>
 
