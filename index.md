@@ -1,11 +1,32 @@
+
 ---
 layout: default
 title: Machine Learning Course - MSBTE K-SCHEME 316316
 permalink: /index.html
 ---
 
+<nav class="main-navbar" style="width: 100%; background: linear-gradient(90deg, #003366 0%, #0055a5 100%); color: #fff; padding: 1.2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); position: sticky; top: 0; z-index: 100;">
+  <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
+    <div style="font-size: 1.6rem; font-weight: 700; letter-spacing: 1px;">MSBTE ML Portal</div>
+    <div style="display: flex; gap: 2rem; font-size: 1.1rem;">
+      <a href="/" style="color: #fff; text-decoration: none; font-weight: 600;">Home</a>
+      <a href="/what-is-ml.md" style="color: #fff; text-decoration: none;">What is ML?</a>
+      <a href="/THEORY_NOTES.md" style="color: #fff; text-decoration: none;">Theory Notes</a>
+      <a href="/practicals/" style="color: #fff; text-decoration: none;">Practicals</a>
+      <a href="/presentations/" style="color: #fff; text-decoration: none;">Presentations</a>
+      <a href="/SYLLABUS.md" style="color: #fff; text-decoration: none;">Syllabus</a>
+    </div>
+  </div>
+</nav>
+
 <!-- Hero Section -->
 <div class="hero">
+<footer style="width: 100%; background: #003366; color: #fff; padding: 2rem 0; text-align: center; margin-top: 2rem;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">MSBTE Machine Learning Course &copy; 2026</div>
+    <div style="font-size: 0.95rem; color: #b3c6e0;">Inspired by BITS eLearn Portal | Designed for modern learners</div>
+  </div>
+</footer>
   <h1>Machine Learning Course</h1>
   <p class="subtitle">MSBTE K-SCHEME 316316 - Semester 6</p>
   <div>

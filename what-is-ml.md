@@ -15,6 +15,17 @@ title: What is Machine Learning? - Interactive Overview
 
 ---
 
+
+## 📊 Official Presentation (PPT)
+
+<div style="text-align: center; margin-bottom: var(--space-xl);">
+  <a href="/what-is-ml-ppt.md" class="btn btn-secondary" target="_blank">
+    <i class="fas fa-file-powerpoint"></i> View PPT: What is Machine Learning?
+  </a>
+</div>
+
+---
+
 ## 🌐 Interactive Gamma Presentation
 
 <div style="text-align: center; padding: var(--space-2xl); background: linear-gradient(135deg, rgba(0, 102, 204, 0.1) 0%, rgba(0, 102, 204, 0.05) 100%); border-radius: var(--radius-lg); margin-bottom: var(--space-2xl); border: 2px solid var(--primary-light);">
