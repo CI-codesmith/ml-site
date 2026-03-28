@@ -7,7 +7,7 @@ permalink: /index.html
 
 <nav class="main-navbar" style="width: 100%; background: linear-gradient(90deg, #003366 0%, #0055a5 100%); color: #fff; padding: 1.2rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); position: sticky; top: 0; z-index: 100;">
   <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
-    <div style="font-size: 1.6rem; font-weight: 700; letter-spacing: 1px;">MSBTE ML Portal</div>
+    <div style="font-size: 1.6rem; font-weight: 700; letter-spacing: 1px;">Chatake Innoworks ML Portal</div>
     <div style="display: flex; gap: 2rem; font-size: 1.1rem;">
       <a href="/" style="color: #fff; text-decoration: none; font-weight: 600;">Home</a>
       <a href="/what-is-ml.md" style="color: #fff; text-decoration: none;">What is ML?</a>
@@ -82,19 +82,19 @@ permalink: /index.html
 
 <!-- Courses Section -->
 <div class="section">
-  <h2 class="section-title">📚 Course Units</h2>
-  <p class="section-subtitle">5 comprehensive units covering ML fundamentals to advanced topics</p>
-  
-  <div class="grid-2">
-    <a href="{{ '/units/unit-1/' | relative_url }}" style="text-decoration: none;">
-      <div class="unit-card unit-1">
+  <h1>Machine Learning Course</h1>
+  <p class="subtitle">Chatake Innoworks K-SCHEME 316316 - Semester 6</p>
+  <div>
+    <span class="badge">Complete & Production Ready</span>
+    <span class="badge">15 Practicals</span>
+    <span class="badge">5 Units</span>
         <h3><i class="fas fa-cube"></i> Unit 1: Introduction</h3>
-        <p>Fundamentals • Types • Python Basics • Environment Setup</p>
+  <p class="description">Comprehensive learning platform with 200+ theory components, hands-on laboratories, real-world applications, and production deployment guidance. <br>MSBTE-aligned, but fully created and owned by <b>Chatake Innoworks</b>.</p>
       </div>
     </a>
     
     <a href="{{ '/units/unit-2/' | relative_url }}" style="text-decoration: none;">
-      <div class="unit-card unit-2">
+    <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Chatake Innoworks ML Course &copy; 2026</div>
         <h3><i class="fas fa-cube"></i> Unit 2: Supervised</h3>
         <p>Regression • Classification • Evaluation • Metrics</p>
       </div>

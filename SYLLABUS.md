@@ -1,273 +1,92 @@
-# Course Syllabus
 
-**Course Code:** 316316 (MSBTE K-SCHEME)  
-**Course Name:** Machine Learning  
-**Semester:** 6  
-**Credits:** 4  
-**Duration:** 6 weeks (recommended)
 
----
+# MACHINE LEARNING (316316) – MSBTE K-SCHEME SYLLABUS (TLO-ALIGNED)
 
-## Course Overview
-
-Machine Learning is a subset of artificial intelligence that enables systems to learn and improve from data without being explicitly programmed. This course provides a comprehensive foundation in ML theory and practice, progressing from fundamentals to production-ready systems.
+**Course Code:** 316316  
+**Course Title:** MACHINE LEARNING  
+**Semester:** 6 (K Scheme)
 
 ---
 
-## Course Outcomes
+## I. THEORY LEARNING OUTCOMES AND ALIGNED COURSE CONTENT
 
-Students will be able to:
+### Unit I: Introduction to Machine Learning
 
-1. **CO1:** Understand machine learning fundamentals and categorize problems
-2. **CO2:** Build and evaluate supervised learning models
-3. **CO3:** Apply unsupervised learning techniques for data discovery
-4. **CO4:** Implement advanced techniques and neural networks
-5. **CO5:** Deploy production-ready ML systems responsibly
-6. **CO6:** Address ethical concerns and fairness in ML
+| TLO | Description |
+|-----|-------------|
+| 1.1 | Describe machine learning concept. |
+| 1.2 | Compare Traditional vs ML based Programming. |
+| 1.3 | Distinguish Supervised, Unsupervised and Reinforcement learning. |
+| 1.4 | Explain the Challenges for Machine learning. |
+| 1.5 | Explain the features of python libraries used for Machine Learning. |
 
----
-
-## Detailed Syllabus
-
-### UNIT 1: Introduction to Machine Learning (20 hours)
-
-**Topics:**
-- 1.1 Basics of ML: Definition, importance, traditional vs ML approach
-- 1.2 Types of ML: Supervised, Unsupervised, Reinforcement learning
-- 1.3 Applications and Challenges in ML
-- 1.4 Python Fundamentals: NumPy, Pandas, Matplotlib
-
-**Learning Outcomes:**
-- Distinguish ML from traditional programming
-- Classify ML problem types
-- Understand data handling basics
-- Set up ML development environment
+**Learning Content:**
+- Basics of ML: Definition, Traditional programming vs ML-based approaches, Role and application of ML in AI and data science
+- Types of ML: Supervised (definition, working, examples), Unsupervised (definition, working, examples, clustering, dimensionality reduction), Reinforcement (agents, rewards, policy learning), Comparison of ML types with real-world applications
+- Applications of ML: Use cases in healthcare, finance, e-commerce, etc.; challenges in ML
+- Introduction to Python for ML: Basics, libraries (NumPy, Pandas, Matplotlib, Scikit-learn), writing/executing simple ML scripts
 
 ---
 
-### UNIT 2: Supervised Learning (30 hours)
+### Unit II: Data Preprocessing
 
-**Topics:**
-- 2.1 Regression: Linear, Polynomial, Regularized regression
-- 2.2 Classification: Logistic Regression, Decision Trees, SVM, KNN
-- 2.3 Model Evaluation: Metrics, cross-validation, ROC curves
-- 2.4 Hyperparameter Tuning: Grid search, random search
+| TLO | Description |
+|-----|-------------|
+| 2.1 | Illustrate the process of cleaning the data. |
+| 2.2 | Explain the functioning of algorithm used for handling missing values. |
+| 2.3 | Select the appropriate dataset splitting technique. |
 
-**Learning Outcomes:**
-- Build regression models for continuous prediction
-- Implement classification algorithms
-- Evaluate models using appropriate metrics
-- Optimize model performance
-
----
-
-### UNIT 3: Unsupervised Learning (25 hours)
-
-**Topics:**
-- 3.1 Clustering: K-Means, Hierarchical, DBSCAN
-- 3.2 Dimensionality Reduction: PCA, t-SNE
-- 3.3 Feature Extraction and Selection
-- 3.4 Anomaly Detection
-
-**Learning Outcomes:**
-- Apply clustering for data segmentation
-- Reduce data dimensionality effectively
-- Discover patterns in unlabeled data
-- Detect anomalies
+**Learning Content:**
+- Data Cleaning: Introduction, identifying/handling noisy data, removing duplicates/inconsistencies, standardizing/normalizing, handling outliers
+- Handling Missing Values: Types, identifying, techniques (removal, mean/median/mode imputation, predictive imputation, algorithms supporting missing values)
+- Splitting Dataset: Importance, train-test split, cross-validation (K-Fold, Leave-One-Out), stratified vs random sampling
 
 ---
 
-### UNIT 4: Advanced Topics (30 hours)
+### Unit III: Feature Selection
 
-**Topics:**
-- 4.1 Neural Networks: Architecture, activation functions, backpropagation
-- 4.2 Deep Learning: CNN, RNN, LSTM
-- 4.3 Ensemble Methods: Bagging, Boosting, Stacking
-- 4.4 Advanced Techniques: Transfer learning, XGBoost, LightGBM
+| TLO | Description |
+|-----|-------------|
+| 3.1 | Explain different feature selection methods. |
+| 3.2 | Illustrate the different feature extraction methods. |
 
-**Learning Outcomes:**
-- Design and train neural networks
-- Implement ensemble methods
-- Apply transfer learning
-- Achieve state-of-the-art performance
+**Learning Content:**
+- Feature Scaling/Selection: Importance, normalization vs standardization, filter methods (correlation, chi-square), wrapper methods (forward/backward), embedded methods (Lasso, Decision Trees)
+- Feature Extraction: PCA, LDA
+- Mutual Information, ANOVA, Recursive Feature Elimination (RFE/RFECV), Feature Importance from tree-based models (XGBoost, LightGBM, Random Forest, SHAP values)
 
 ---
 
-### UNIT 5: Ethics, Production & Real-World Applications (25 hours)
+### Unit IV: Supervised Learning
 
-**Topics:**
-- 5.1 ML Ethics: Bias, fairness, transparency, accountability
-- 5.2 Privacy: GDPR, data protection, federated learning
-- 5.3 Production Deployment: APIs, containerization, cloud platforms
-- 5.4 Real-world Case Studies and Best Practices
+| TLO | Description |
+|-----|-------------|
+| 4.1 | Distinguish the working of Decision Tree, KNN and SVM classification algorithm. |
+| 4.2 | Explain the working of specified Regression algorithm. |
+| 4.3 | Explain the process of model performance evaluation. |
 
-**Learning Outcomes:**
-- Address ethical concerns in ML
-- Comply with privacy regulations
-- Deploy models to production
-- Apply ML to real-world problems
-
----
-
-## Assessment & Evaluation
-
-| Assessment Type | Count | Duration | Weightage |
-|-----------------|-------|----------|-----------|
-| Weekly Tests (WT) | 5 | 1 hour | 15% |
-| Class Tests (CT) | 2 | 2 hours | 20% |
-| Practicals | 15 | 3-5 hours each | 35% |
-| Preliminary Exams | 2 | 3 hours | 30% |
-
-**Passing Criteria:**
-- Minimum 40% in theory exams
-- Minimum 40% in practicals
-- Overall passing: 50%
+**Learning Content:**
+- Classification Algorithms: Decision Trees, KNN, SVM
+- Regression Algorithms: Linear, Logistic, Ridge
+- Model Performance Evaluation: Confusion Matrix, Accuracy, Precision, Recall
 
 ---
 
-## Practical Exercises
+### Unit V: Unsupervised Learning
 
-15 laboratory exercises covering:
+| TLO | Description |
+|-----|-------------|
+| 5.1 | Explain the concept of clustering in data analysis and its significance. |
+| 5.2 | Compare K-Means and Hierarchical Clustering and choose the appropriate technique based on the problem. |
+| 5.3 | Describe the importance of Dimensionality reduction. |
+| 5.4 | Illustrate the process of dimensionality reduction using PCA. |
 
-1. **Practical 1-2:** Python setup and data exploration
-2. **Practical 3-5:** Supervised learning algorithms
-3. **Practical 6-8:** Unsupervised learning techniques
-4. **Practical 9-10:** Advanced algorithms and comparison
-5. **Practical 11-13:** Time series and neural networks
-6. **Practical 14-15:** Real-world project and deployment
-
-Each practical requires:
-- ✅ Completion report
-- ✅ Working code
-- ✅ Results and analysis
-- ✅ Learning outcomes checklist
+**Learning Content:**
+- Clustering: Definition, importance, applications
+- K-Means: Definition, working, steps, advantages/disadvantages
+- Hierarchical Clustering: Types, steps, advantages/disadvantages, comparison with K-Means
+- Dimensionality Reduction: Importance, PCA (definition, principles, eigenvectors/values, steps, explained variance, optimal dimensionality, advantages/disadvantages, applications)
 
 ---
 
-## Recommended Prerequisites
-
-- Basic mathematics: Algebra, Statistics, Probability
-- Basic programming: Python fundamentals
-- Understanding of data structures
-
----
-
-## Resources Required
-
-### Software
-- Python 3.8+
-- Anaconda/Miniconda
-- Jupyter Notebook
-- Git & GitHub
-
-### Libraries
-- NumPy, Pandas, Scikit-learn
-- Matplotlib, Seaborn
-- TensorFlow/Keras
-- XGBoost, LightGBM
-
-### Hardware
-- Computer with 4GB+ RAM
-- 5GB disk space
-- Internet connection
-
----
-
-## Learning Approach
-
-### Theory (40%)
-- Lecture notes and comprehensive reading material
-- Video tutorials (where available)
-- Research paper references
-
-### Practice (40%)
-- 15 hands-on practicals
-- Code examples and walkthroughs
-- Project-based learning
-
-### Assessment (20%)
-- Weekly quizzes
-- Class tests
-- Preliminary exams
-- Project evaluation
-
----
-
-## Course Delivery Timeline
-
-| Week | Unit | Topics | Practicals | Assessment |
-|------|------|--------|-----------|------------|
-| 1 | 1 | ML Basics | P1-2 | - |
-| 2 | 2 | Supervised | P3-5 | WT1, WT2 |
-| 3 | 3 | Unsupervised | P6-8 | WT3 |
-| 4 | 4 | Advanced | P9-10, P12-13 | WT4, CT1 |
-| 5-6 | 5 | Production | P11, P14-15 | WT5, CT2, Prelim |
-
----
-
-## Learning Outcomes Mapping
-
-| Learning Outcome | Unit(s) | Practical(s) | Assessment |
-|------------------|---------|------------|------------|
-| Define ML concepts | 1 | 1-2 | WT1 |
-| Build supervised models | 2 | 3-5 | WT2, CT1 |
-| Apply unsupervised learning | 3 | 6-8 | WT3 |
-| Implement advanced techniques | 4 | 9-10, 12-13 | WT4, CT2 |
-| Deploy responsibly | 5 | 11, 14-15 | WT5, Prelim |
-
----
-
-## Bibliography & References
-
-### Recommended Books
-- "Machine Learning" - Tom M. Mitchell
-- "Introduction to Statistical Learning" - James et al.
-- "Deep Learning" - Goodfellow et al.
-- "Hands-On Machine Learning" - Aurélien Géron
-
-### Online Resources
-- Scikit-learn Documentation
-- TensorFlow Documentation
-- Kaggle Datasets and Competitions
-- Papers with Code
-
-### Standards & Frameworks
-- MSBTE K-SCHEME Curriculum
-- AI Ethics Guidelines
-- GDPR Data Protection
-
----
-
-## Academic Integrity
-
-Students are expected to:
-- Complete all work independently
-- Cite sources properly
-- Avoid plagiarism
-- Report ethical concerns
-- Maintain academic honesty
-
----
-
-## Support & Office Hours
-
-- **Instructor:** Available for questions during class
-- **Email:** contact@chatakeinnoworks.com
-- **Discussion Forum:** GitHub Issues
-- **Office Hours:** By appointment
-
----
-
-## Course Modification
-
-This syllabus is subject to modification at instructor discretion. Changes will be communicated to students in advance.
-
----
-
-**Course Created:** December 2025  
-**Last Updated:** December 28, 2025  
-**Status:** Active
-
----
-
-[← Back to Home](/)
+**Note:** This syllabus is as per MSBTE K-SCHEME for course code 316316. For practicals, assessment rubrics, and latest updates, refer to the official MSBTE documentation.
