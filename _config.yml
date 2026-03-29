@@ -3,8 +3,8 @@
 # Site settings
 title: Machine Learning Course (K-SCHEME 316316)
 description: Complete MSBTE machine learning curriculum with theory, practicals, and assessments
-url: "https://CI-codesmith.github.io/ml-site"
-baseurl: "/ml-site"
+url: "https://ml.chatakeinnoworks.com"
+baseurl: ""
 
 # Author
 author:
