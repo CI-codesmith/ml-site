@@ -23,112 +23,157 @@ description: Access your machine learning course assessments and results
                 Assessment Results
             </h1>
             <p class="text-xl text-slate-700 max-w-2xl mx-auto">
-                Access your coursework, submissions, and performance metrics for the Machine Learning K-Scheme curriculum
+                Access your personalized assessment results & performance metrics for the Machine Learning K-Scheme curriculum
             </p>
         </div>
 
-        <!-- Results Container -->
-        <div class="grid md:grid-cols-2 gap-8 mb-12">
-            <!-- Access Results -->
-            <div class="bg-white rounded-3xl p-10 border border-slate-200 hover:shadow-lg hover:border-blue-200 transition-all">
-                <div class="w-14 h-14 rounded-2xl bg-brand-blue/10 flex items-center justify-center text-brand-blue mb-6">
-                    <i data-lucide="clipboard-list" class="w-7 h-7"></i>
+        <!-- Assessment Form Section -->
+        <div class="bg-white rounded-3xl border border-slate-200 p-12 mb-12 shadow-lg">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-12 h-12 rounded-2xl bg-brand-blue/10 flex items-center justify-center text-brand-blue">
+                    <i data-lucide="form" class="w-6 h-6"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-brand-navy mb-3">Your Results</h3>
-                <p class="text-slate-700 mb-6">
-                    View your assessment scores, unit-wise performance, and detailed feedback from instructors.
-                </p>
-                <div class="space-y-3">
-                    <div class="flex items-center gap-3 text-slate-600">
-                        <span class="text-sm">✓ Unit-wise Performance</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-slate-600">
-                        <span class="text-sm">✓ Assessment History</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-slate-600">
-                        <span class="text-sm">✓ Progress Overview</span>
-                    </div>
-                </div>
-                <a href="#" class="inline-block mt-8 px-6 py-3 bg-brand-blue text-white font-semibold rounded-lg hover:bg-brand-indigo transition-colors">
-                    View My Results
-                </a>
+                <h2 class="text-2xl font-bold text-brand-navy">View Your Scorecard</h2>
             </div>
 
-            <!-- Course Progress -->
-            <div class="bg-white rounded-3xl p-10 border border-slate-200 hover:shadow-lg hover:border-blue-200 transition-all">
-                <div class="w-14 h-14 rounded-2xl bg-brand-blue/10 flex items-center justify-center text-brand-blue mb-6">
-                    <i data-lucide="trending-up" class="w-7 h-7"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-brand-navy mb-3">Course Progress</h3>
-                <p class="text-slate-700 mb-6">
-                    Track your learning journey across all 5 units and 22 microprojects with detailed analytics.
-                </p>
-                <div class="space-y-4">
+            <p class="text-slate-700 mb-8">Enter your details to access your personalized assessment results:</p>
+
+            <form id="scorecardForm" style="display: flex; flex-direction: column; gap: 1.2rem;">
+                
+                <div class="grid md:grid-cols-3 gap-6">
                     <div>
-                        <div class="flex justify-between mb-2">
-                            <span class="text-sm font-medium text-slate-700">Overall Progress</span>
-                            <span class="text-sm font-bold text-brand-blue">85%</span>
-                        </div>
-                        <div class="w-full bg-slate-200 rounded-full h-2">
-                            <div class="bg-gradient-to-r from-brand-blue to-brand-indigo h-2 rounded-full" style="width: 85%"></div>
-                        </div>
+                        <label for="firstName" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #0A1628;">First Name</label>
+                        <input type="text" id="firstName" placeholder="e.g., Akash" required style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s; box-sizing: border-box; font-family: inherit;" />
+                    </div>
+
+                    <div>
+                        <label for="lastName" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #0A1628;">Last Name / Surname</label>
+                        <input type="text" id="lastName" placeholder="e.g., Chatake" required style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s; box-sizing: border-box; font-family: inherit;" />
+                    </div>
+
+                    <div>
+                        <label for="rollNumber" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #0A1628;">Roll Number</label>
+                        <input type="text" id="rollNumber" placeholder="e.g., 3201" required style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s; box-sizing: border-box; font-family: inherit;" />
                     </div>
                 </div>
-                <a href="{{ '/' | relative_url }}#units" class="inline-block mt-8 px-6 py-3 bg-brand-blue text-white font-semibold rounded-lg hover:bg-brand-indigo transition-colors">
-                    Continue Learning
-                </a>
+
+                <button type="submit" style="padding: 1rem 2rem; background: linear-gradient(90deg, #3B82F6 0%, #6366F1 100%); color: white; border: none; border-radius: 8px; font-size: 1.05rem; font-weight: 600; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 24px rgba(59, 130, 246, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                    View My Scorecard
+                </button>
+
+                <div id="message" style="margin-top: 1rem; padding: 0.75rem; border-radius: 8px; display: none; text-align: center; font-weight: 600;"></div>
+
+            </form>
+        </div>
+
+        <!-- Assessment Structure -->
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <div class="bg-white rounded-2xl p-8 border border-slate-200">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600">
+                        <i data-lucide="clipboard" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-brand-navy">Weekly Tests</h3>
+                </div>
+                <p class="text-slate-600 text-sm">5 papers (1 hour each)</p>
+                <p class="text-slate-500 text-xs mt-2">Unit-wise assessments</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 border border-slate-200">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center text-indigo-600">
+                        <i data-lucide="file-text" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-brand-navy">Class Tests</h3>
+                </div>
+                <p class="text-slate-600 text-sm">2 papers (2 hours each)</p>
+                <p class="text-slate-500 text-xs mt-2">Multi-unit coverage</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 border border-slate-200">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center text-purple-600">
+                        <i data-lucide="award" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-brand-navy">Preliminary Exams</h3>
+                </div>
+                <p class="text-slate-600 text-sm">2 papers (3 hours each)</p>
+                <p class="text-slate-500 text-xs mt-2">Full curriculum exam</p>
             </div>
         </div>
 
-        <!-- Assessment Details -->
-        <div class="bg-gradient-to-r from-brand-navy to-brand-midnight rounded-3xl p-12 text-white">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center">
-                    <i data-lucide="file-check" class="w-8 h-8"></i>
+        <!-- Assessment Stats -->
+        <div class="bg-gradient-to-r from-brand-navy to-brand-midnight rounded-3xl p-12 text-white mb-12">
+            <h3 class="text-2xl font-bold mb-8">📊 Assessment Coverage</h3>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div>
+                    <p class="text-4xl font-bold">171</p>
+                    <p class="text-blue-200 text-sm mt-2">Total Assessments</p>
                 </div>
                 <div>
-                    <h3 class="text-3xl font-bold">171 Student Assessments</h3>
-                    <p class="text-blue-200">Complete evaluation framework across all units</p>
+                    <p class="text-4xl font-bold">35</p>
+                    <p class="text-blue-200 text-sm mt-2">Unit Tests</p>
                 </div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10">
-                    <h4 class="text-sm font-bold text-blue-200 uppercase mb-3">Unit Assessments</h4>
-                    <p class="text-3xl font-bold">35</p>
-                    <p class="text-sm text-blue-200 mt-2">Theory & Concept Tests</p>
+                <div>
+                    <p class="text-4xl font-bold">22</p>
+                    <p class="text-blue-200 text-sm mt-2">Practical Labs</p>
                 </div>
-                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10">
-                    <h4 class="text-sm font-bold text-blue-200 uppercase mb-3">Practical Labs</h4>
-                    <p class="text-3xl font-bold">22</p>
-                    <p class="text-sm text-blue-200 mt-2">Hands-On Projects</p>
-                </div>
-                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10">
-                    <h4 class="text-sm font-bold text-blue-200 uppercase mb-3">Special Tests</h4>
-                    <p class="text-3xl font-bold">114</p>
-                    <p class="text-sm text-blue-200 mt-2">Quizzes & Assignments</p>
+                <div>
+                    <p class="text-4xl font-bold">114</p>
+                    <p class="text-blue-200 text-sm mt-2">Quizzes</p>
                 </div>
             </div>
         </div>
 
-        <!-- Need Help Section -->
-        <div class="mt-16 text-center">
-            <h3 class="text-2xl font-bold text-brand-navy mb-4">Need Help?</h3>
-            <p class="text-slate-700 mb-8 max-w-2xl mx-auto">
-                Contact your instructor or visit the Internship Portal for additional support and career guidance.
-            </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="{{ '/' | relative_url }}" class="px-8 py-3 bg-brand-blue text-white font-semibold rounded-lg hover:bg-brand-indigo transition-colors">
-                    Back to Home
-                </a>
-                <a href="https://internship.chatakeinnoworks.com/" target="_blank" class="px-8 py-3 border-2 border-brand-blue text-brand-blue font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-colors">
-                    Visit Internship Portal
-                </a>
-            </div>
+        <!-- Back Links -->
+        <div class="text-center flex flex-col md:flex-row gap-4 justify-center">
+            <a href="{{ '/' | relative_url }}" class="px-8 py-3 bg-brand-blue text-white font-semibold rounded-lg hover:bg-brand-indigo transition-colors">
+                Back to Home
+            </a>
+            <a href="https://internship.chatakeinnoworks.com/" target="_blank" class="px-8 py-3 border-2 border-brand-blue text-brand-blue font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-colors">
+                Visit Internship Portal
+            </a>
         </div>
     </div>
 </section>
 
 <script>
     lucide.createIcons();
+
+    // Client-side SHA-256 hashing for secure scorecard access
+    async function hashScorecardKey(firstName, lastName, rollNumber) {
+        const first = firstName.trim().toLowerCase();
+        const last = lastName.trim().toLowerCase();
+        const roll = rollNumber.trim();
+        const combined = `${first}${last}${roll}`;
+
+        // Use SubtleCrypto for hashing
+        const encoder = new TextEncoder();
+        const data = encoder.encode(combined);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        return hashHex;
+    }
+
+    // Form submission handler
+    document.getElementById('scorecardForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const rollNumber = document.getElementById('rollNumber').value;
+        
+        try {
+            const hash = await hashScorecardKey(firstName, lastName, rollNumber);
+            // Redirect to scorecard
+            window.location.href = `/results/${hash}.html`;
+        } catch (error) {
+            const messageDiv = document.getElementById('message');
+            messageDiv.style.display = 'block';
+            messageDiv.style.background = '#fee2e2';
+            messageDiv.style.color = '#dc2626';
+            messageDiv.textContent = 'Error processing your request. Please try again.';
+        }
+    });
 </script>
