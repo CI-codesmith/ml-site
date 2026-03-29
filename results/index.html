@@ -127,7 +127,7 @@ description: Access your machine learning course assessments and results
 
         <!-- Back Links -->
         <div class="text-center flex flex-col md:flex-row gap-4 justify-center">
-            <a href="{{ '/' | relative_url }}" class="px-8 py-3 bg-brand-blue text-white font-semibold rounded-lg hover:bg-brand-indigo transition-colors">
+            <a href="/ml-site/" class="px-8 py-3 bg-brand-blue text-white font-semibold rounded-lg hover:bg-brand-indigo transition-colors">
                 Back to Home
             </a>
             <a href="https://internship.chatakeinnoworks.com/" target="_blank" class="px-8 py-3 border-2 border-brand-blue text-brand-blue font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-colors">
@@ -195,9 +195,8 @@ description: Access your machine learning course assessments and results
             messageDiv.textContent = '⏳ Loading your scorecard...';
             
             const hash = await hashScorecardKey(firstName, lastName, rollNumber);
-            // Redirect to scorecard
-            const baseUrl = '{{ '/results/' | relative_url }}';
-            window.location.href = baseUrl + hash + '.html';
+            // Redirect to scorecard - GitHub Pages baseurl is /ml-site/
+            window.location.href = '/ml-site/results/' + hash + '.html';
         } catch (error) {
             messageDiv.style.display = 'block';
             messageDiv.style.background = '#fee2e2';
