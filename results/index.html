@@ -142,18 +142,24 @@ description: Access your machine learning course assessments and results
 
     // Client-side SHA-256 hashing for secure scorecard access
     async function hashScorecardKey(firstName, lastName, rollNumber) {
-        const first = firstName.trim().toLowerCase();
-        const last = lastName.trim().toLowerCase();
-        const roll = rollNumber.trim();
-        const combined = `${first}${last}${roll}`;
-
-        // Use SubtleCrypto for hashing
-        const encoder = new TextEncoder();
-        const data = encoder.encode(combined);
-        const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-        return hashHex;
+      // Clean inputs: trim whitespace, convert to lowercase
+      const first = firstName.trim().toLowerCase();
+      const last = lastName.trim().toLowerCase();
+      const roll = String(rollNumber).trim();
+      
+      // Extract first 2 letters of first name, first 2 letters of last name, append roll
+      const key = first.substring(0, 2) + last.substring(0, 2) + roll;
+      
+      // Encode as UTF-8 and hash with SHA-256
+      const encoder = new TextEncoder();
+      const data = encoder.encode(key);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+      
+      // Convert ArrayBuffer to hex string
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+      
+      return hashHex;
     }
 
     // Form submission handler
@@ -163,17 +169,40 @@ description: Access your machine learning course assessments and results
         const firstName = document.getElementById('firstName').value;
         const lastName = document.getElementById('lastName').value;
         const rollNumber = document.getElementById('rollNumber').value;
+        const messageDiv = document.getElementById('message');
         
+        // Validation
+        if (!firstName.trim() || !lastName.trim() || !rollNumber.trim()) {
+            messageDiv.style.display = 'block';
+            messageDiv.style.background = '#fee2e2';
+            messageDiv.style.color = '#dc2626';
+            messageDiv.textContent = '❌ Please fill in all fields';
+            return;
+        }
+        
+        if (isNaN(rollNumber) || parseInt(rollNumber) <= 0) {
+            messageDiv.style.display = 'block';
+            messageDiv.style.background = '#fee2e2';
+            messageDiv.style.color = '#dc2626';
+            messageDiv.textContent = '❌ Roll number must be a valid number';
+            return;
+        }
+
         try {
+            messageDiv.style.display = 'block';
+            messageDiv.style.background = '#dbeafe';
+            messageDiv.style.color = '#0369a1';
+            messageDiv.textContent = '⏳ Loading your scorecard...';
+            
             const hash = await hashScorecardKey(firstName, lastName, rollNumber);
             // Redirect to scorecard
             window.location.href = `/results/${hash}.html`;
         } catch (error) {
-            const messageDiv = document.getElementById('message');
             messageDiv.style.display = 'block';
             messageDiv.style.background = '#fee2e2';
             messageDiv.style.color = '#dc2626';
-            messageDiv.textContent = 'Error processing your request. Please try again.';
+            messageDiv.textContent = '❌ Error processing request. Please try again.';
+            console.error('Hash error:', error);
         }
     });
 </script>
