@@ -10,71 +10,122 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts - Premium Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+      :root {
+        --ci-primary: #1a1a2e;
+        --ci-secondary: #0f3460;
+        --ci-accent: #e94560;
+        --ci-light-accent: #f39c12;
+        --ci-text: #2c3e50;
+        --ci-light-text: #ecf0f1;
+      }
+    </style>
   </head>
   <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-brand">
-          <a href="{{ '/' | relative_url }}" class="logo">
-            <i class="fas fa-brain"></i>
-            <span>ML Course</span>
-          </a>
-        </div>
-        <ul class="navbar-menu">
-          <li><a href="{{ '/' | relative_url }}">Home</a></li>
-          <li><a href="{{ '/units/' | relative_url }}">Units</a></li>
-          <li><a href="{{ '/practicals/' | relative_url }}">Practicals</a></li>
-          <li><a href="{{ '/assessments/' | relative_url }}">Assessments</a></li>
-          <li><a href="{{ '/resources/' | relative_url }}">Resources</a></li>
-          <li><a href="https://github.com/CI-codesmith/ml-site" target="_blank">GitHub</a></li>
-        </ul>
+    <!-- Professional Navigation -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <a href="{{ '/' | relative_url }}" class="site-title">
+          <i class="fas fa-brain"></i> MindforgeAI
+        </a>
+        <nav class="site-nav">
+          <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a>
+          <a href="{{ '/units/' | relative_url }}" class="nav-link {% if page.url contains '/units' %}active{% endif %}">Units</a>
+          <a href="{{ '/practicals/' | relative_url }}" class="nav-link {% if page.url contains '/practicals' %}active{% endif %}">Practicals</a>
+          <a href="{{ '/assessments/' | relative_url }}" class="nav-link {% if page.url contains '/assessments' %}active{% endif %}">Assessments</a>
+          <a href="{{ '/resources/' | relative_url }}" class="nav-link {% if page.url contains '/resources' %}active{% endif %}">Resources</a>
+          <a href="https://github.com/CI-codesmith/ml-site" target="_blank" class="nav-link"><i class="fab fa-github"></i> GitHub</a>
+        </nav>
       </div>
-    </nav>
+    </header>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main class="page-content">
       <div class="container">
         {{ content }}
       </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h4>ML Course</h4>
-            <p>MSBTE K-SCHEME 316316 - Complete Learning Platform</p>
-          </div>
-          <div class="footer-section">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="{{ '/units/' | relative_url }}">Units</a></li>
-              <li><a href="{{ '/practicals/' | relative_url }}">Practicals</a></li>
-              <li><a href="{{ '/assessments/' | relative_url }}">Assessments</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4>Resources</h4>
-            <ul>
-              <li><a href="{{ '/resources/installation-guide.md' | relative_url }}">Setup Guide</a></li>
-              <li><a href="{{ '/THEORY_NOTES.md' | relative_url }}">Theory Notes</a></li>
-              <li><a href="{{ '/SYLLABUS.md' | relative_url }}">Syllabus</a></li>
-            </ul>
+    <!-- Professional Footer -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>MindforgeAI Learning Hub</h3>
+          <p>Complete MSBTE K-SCHEME 316316 curriculum for modern machine learning engineers</p>
+          <div class="social-links">
+            <a href="https://github.com/CI-codesmith/ml-site" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.chatakeinnoworks.com/" target="_blank" title="Chatake Innoworks"><i class="fas fa-globe"></i></a>
           </div>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2025 ChatakeInnoWorks | MSBTE K-SCHEME 316316 | <a href="https://github.com/CI-codesmith/ml-site">View on GitHub</a></p>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="{{ '/units/' | relative_url }}">All Units</a>
+          <a href="{{ '/practicals/' | relative_url }}">Practicals</a>
+          <a href="{{ '/assessments/' | relative_url }}">Assessments</a>
+          <a href="{{ '/resources/' | relative_url }}">Resources</a>
+        </div>
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <a href="{{ '/THEORY_NOTES.md' | relative_url }}">Theory Notes</a>
+          <a href="{{ '/SYLLABUS.md' | relative_url }}">Syllabus</a>
+          <a href="{{ '/DEPLOYMENT.md' | relative_url }}">Deployment</a>
+          <a href="https://github.com/CI-codesmith/ml-site">Source Code</a>
+        </div>
+        <div class="footer-section">
+          <h3>Organization</h3>
+          <p><strong>Chatake Innoworks Pvt. Ltd.</strong></p>
+          <p>MindforgeAI Division</p>
+          <p><a href="https://www.chatakeinnoworks.com/">www.chatakeinnoworks.com</a></p>
         </div>
       </div>
+      <div class="footer-bottom">
+        <div class="branding">Chatake Innoworks</div>
+        <p>&copy; 2025 Chatake Innoworks Pvt. Ltd. | All Rights Reserved | <a href="https://www.chatakeinnoworks.com/">Corporate Website</a></p>
+      </div>
     </footer>
+
+    <style>
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-link {
+        position: relative;
+        cursor: pointer;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .social-links a {
+        display: inline-flex;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--ci-light-text);
+        transition: all 0.3s ease;
+      }
+
+      .social-links a:hover {
+        background: var(--ci-accent);
+        color: white;
+      }
+    </style>
   </body>
 </html>
