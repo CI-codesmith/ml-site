@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindforgeAI - MSBTE K-Scheme Machine Learning Mastery</title>
+    <meta name="description" content="Complete MSBTE K-Scheme 316316 machine learning curriculum combining theory, practicals, and real-world applications for diploma and engineering students.">
+    
+    <!-- ================= OG + TWITTER PREVIEW ================= -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MindforgeAI | Chatake Innoworks">
+    <meta property="og:title" content="Machine Learning Mastery | Complete K-Scheme Curriculum">
+    <meta property="og:description" content="Complete MSBTE K-Scheme 316316 curriculum with 5 units, 15+ practicals, and 171 student assessments">
+    <meta property="og:url" content="https://ci-codesmith.github.io/ml-site">
+    <meta property="og:image" content="https://ci-codesmith.github.io/ml-site/assets/preview.png">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Machine Learning Mastery - MSBTE K-Scheme">
+    <meta name="twitter:description" content="5 Complete Units | 15+ Practicals | 171 Students | 100% Completion">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A1628'/><text x='50' y='50' font-family='Arial, sans-serif' font-size='45' font-weight='700' fill='%233B82F6' text-anchor='middle' dominant-baseline='central'>AI</text></svg>">
+    
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                        display: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: {
+                            850: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        brand: {
+                            navy: '#0A1628',
+                            midnight: '#1A2332',
+                            slate: '#2D3748',
+                            blue: '#3B82F6',
+                            indigo: '#6366F1',
+                            purple: '#8B5CF6',
+                            accent: '#10B981',
+                        },
+                        premium: {
+                            gold: '#D4AF37',
+                            silver: '#C0C0C0',
+                            bronze: '#CD7F32',
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'slide-in-left': 'slideInLeft 0.8s ease-out forwards',
+                        'slide-in-right': 'slideInRight 0.8s ease-out forwards',
+                        'scale-in': 'scaleIn 0.8s ease-out forwards',
+                        'reveal-up': 'revealUp 0.6s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideInLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(-40px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        slideInRight: {
+                            '0%': { opacity: '0', transform: 'translateX(40px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.95)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        },
+                        revealUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background: linear-gradient(to bottom, #FFFFFF 0%, #F8FAFC 100%);
+            color: #0A1628;
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
+            letter-spacing: -0.01em;
+            line-height: 1.7;
+        }
+
+        /* Premium Glass Navigation */
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(24px) saturate(180%);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Hover Card Effects */
+        .hover-card {
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: 1px solid rgba(203, 213, 225, 0.5);
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        .hover-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 24px 48px -12px rgba(59, 130, 246, 0.15), 0 0 0 1px rgba(59, 130, 246, 0.1);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        /* Gold Accent Line */
+        .gold-accent {
+            position: relative;
+        }
+        .gold-accent::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -12px;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #D4AF37 0%, #F59E0B 100%);
+            border-radius: 2px;
+        }
+
+        /* Section Headers */
+        h1 { line-height: 1.2; }
+        h2 { line-height: 1.25; }
+        p { line-height: 1.75; letter-spacing: 0.3px; }
+    </style>
+</head>
+<body class="selection:bg-brand-blue selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="nav-glass fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-blue to-brand-indigo flex items-center justify-center text-white font-bold text-sm tracking-tight">AI</div>
+                <div class="flex flex-col">
+                    <h1 class="font-semibold text-lg tracking-tight text-slate-900">MindforgeAI</h1>
+                    <p class="text-xs font-medium text-gray-500 uppercase tracking-widest">Chatake Innoworks</p>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#units" class="text-xs font-medium text-slate-700 hover:text-brand-blue transition-colors">Units</a>
+                <a href="#practicals" class="text-xs font-medium text-slate-700 hover:text-brand-blue transition-colors">Practicals</a>
+                <a href="#projects" class="text-xs font-medium text-slate-700 hover:text-brand-blue transition-colors">Projects</a>
+                <a href="#stats" class="text-xs font-medium text-slate-700 hover:text-brand-blue transition-colors">Resources</a>
+                <a href="https://github.com/CI-codesmith/ml-site" target="_blank" class="px-6 py-2.5 bg-slate-900 text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                    GitHub Repository
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-36 pb-28 lg:pt-56 lg:pb-40 overflow-hidden">
+        <!-- Premium Geometric Background -->
+        <div class="absolute inset-0 -z-10">
+            <!-- Base gradient -->
+            <div class="absolute inset-0 bg-gradient-to-br from-white via-slate-50/40 to-white"></div>
+            
+            <!-- Grid Pattern -->
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1440 900" preserveAspectRatio="none" style="opacity: 0.03;">
+                <defs>
+                    <pattern id="grid-ml" width="80" height="80" patternUnits="userSpaceOnUse">
+                        <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#3B82F6" stroke-width="1"/>
+                    </pattern>
+                </defs>
+                <rect width="1440" height="900" fill="url(#grid-ml)" />
+            </svg>
+            
+            <!-- Diagonal accent lines -->
+            <div class="absolute inset-0 opacity-5">
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1440 900" preserveAspectRatio="none">
+                    <line x1="0" y1="0" x2="1440" y2="900" stroke="#3B82F6" stroke-width="2"/>
+                    <line x1="0" y1="100" x2="1340" y2="900" stroke="#3B82F6" stroke-width="1"/>
+                    <line x1="1440" y1="0" x2="0" y2="900" stroke="#6366F1" stroke-width="2"/>
+                </svg>
+            </div>
+            
+            <!-- Soft radial gradients -->
+            <div class="absolute top-20 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-blue-200/20 to-transparent rounded-full blur-[160px] opacity-60"></div>
+            <div class="absolute -bottom-20 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-100/15 to-transparent rounded-full blur-[140px] opacity-50"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <!-- Live Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-8 bg-white border border-slate-200 rounded-full shadow-sm animate-fade-in-up">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-pulse absolute inline-flex h-full w-full rounded-full bg-brand-blue opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-blue"></span>
+                </span>
+                <span class="text-xs font-bold tracking-wide text-slate-600 uppercase">MSBTE K-Scheme 316316</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-6xl lg:text-8xl font-serif font-bold text-slate-900 tracking-tight leading-[1.2] mb-8 animate-fade-in-up" style="animation-delay: 100ms;">
+                Machine Learning <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue via-brand-indigo to-brand-purple font-display">Mastery</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-xl lg:text-2xl text-slate-700 max-w-3xl mx-auto mb-14 leading-relaxed font-light tracking-wide animate-fade-in-up" style="animation-delay: 200ms;">
+                Complete curriculum combining <strong class="font-semibold text-brand-navy">theory, practicals, and real-world applications</strong>. Master the foundations of AI/ML with hands-on projects and comprehensive assessments.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-5 justify-center animate-fade-in-up mb-24" style="animation-delay: 300ms;">
+                <a href="#units" class="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-brand-navy to-brand-midnight text-white font-semibold text-base tracking-normal rounded-2xl hover:shadow-2xl hover:shadow-brand-blue/30 transition-all duration-500 hover:-translate-y-1 hover:scale-105">
+                    Explore Curriculum 
+                    <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="https://github.com/CI-codesmith/ml-site" target="_blank" class="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-white/80 backdrop-blur-sm border-2 border-slate-200 text-slate-900 font-semibold text-base tracking-normal rounded-2xl hover:bg-white hover:border-brand-blue/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+                    <i data-lucide="github" class="w-5 h-5 group-hover:rotate-12 transition-transform"></i>
+                    View on GitHub
+                </a>
+            </div>
+
+            <!-- Partnerships/Credentials -->
+            <div class="border-t border-slate-200/60 pt-12 flex flex-wrap justify-center gap-16 opacity-50 hover:opacity-100 transition-opacity duration-700">
+                <span class="font-bold text-lg text-brand-navy tracking-tight">MSBTE Certified</span>
+                <span class="font-bold text-lg text-brand-navy tracking-tight">171 Students</span>
+                <span class="font-bold text-lg text-brand-navy tracking-tight">15+ Practicals</span>
+                <span class="font-bold text-lg text-brand-navy tracking-tight">100% Completion</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Highlights Strip -->
+    <section class="bg-gradient-to-r from-brand-navy via-brand-midnight to-brand-slate py-8 overflow-hidden relative">
+        <style>
+            @keyframes scroll-left {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+            .curriculum-scroll {
+                animation: scroll-left 40s linear infinite;
+                will-change: transform;
+            }
+            .curriculum-scroll:hover {
+                animation-play-state: paused;
+            }
+        </style>
+        <div class="flex whitespace-nowrap curriculum-scroll">
+            <div class="flex gap-12 px-6 text-white font-bold text-sm md:text-base uppercase tracking-wider">
+                <span class="flex items-center gap-2"><span class="text-brand-blue">•</span> Foundations</span>
+                <span class="flex items-center gap-2"><span class="text-brand-blue">•</span> Supervised Learning</span>
+                <span class="flex items-center gap-2"><span class="text-brand-blue">•</span> Deep Learning</span>
+                <span class="flex items-center gap-2"><span class="text-brand-blue">•</span> Microprojects</span>
+                <span class="flex items-center gap-2"><span class="text-brand-blue">•</span> Advanced Techniques</span>
+                <span class="flex items-center gap-2"><span class="text-brand-blue">•</span> Real-World Applications</span>
+            </div>
+            <div class="flex gap-12 px-6 text-white font-bold text-sm md:text-base uppercase tracking-wider" aria-hidden="true">
+                <span class="flex items-center gap-2"><span class="text-brand-blue">•</span> Foundations</span>
+                <span class="flex items-center gap-2"><span class="text-brand-blue">•</span> Supervised Learning</span>
+                <span class="flex items-center gap-2"><span class="text-brand-blue">•</span> Deep Learning</span>
+                <span class="flex items-center gap-2"><span class="text-brand-blue">•</span> Microprojects</span>
+                <span class="flex items-center gap-2"><span class="text-brand-blue">•</span> Advanced Techniques</span>
+                <span class="flex items-center gap-2"><span class="text-brand-blue">•</span> Real-World Applications</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Units Section -->
+    <section id="units" class="py-32 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-t border-slate-200 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 -z-10 opacity-[0.02]">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1440 900" preserveAspectRatio="none">
+                <defs>
+                    <pattern id="grid-units" width="80" height="80" patternUnits="userSpaceOnUse">
+                        <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#3B82F6" stroke-width="1"/>
+                    </pattern>
+                </defs>
+                <rect width="1440" height="900" fill="url(#grid-units)" />
+            </svg>
+        </div>
+        <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-blue-100/40 to-transparent rounded-full blur-[140px]"></div>
+        <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-indigo-100/40 to-transparent rounded-full blur-[140px]"></div>
+
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="mb-16">
+                <span class="text-brand-blue font-bold text-xs uppercase tracking-wider">Curriculum</span>
+                <div class="mt-3 mb-4">
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-brand-navy gold-accent inline-block pb-4">Complete Learning Path</h2>
+                </div>
+                <div class="inline-flex px-5 py-2.5 bg-white/70 backdrop-blur-md rounded-lg shadow-lg shadow-blue-100/50 border border-slate-200/50">
+                    <p class="text-slate-700 font-medium text-xs">5 comprehensive units designed for diploma and engineering students</p>
+                </div>
+            </div>
+
+            <!-- Units Grid -->
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Unit 1 -->
+                <div class="bg-white/90 backdrop-blur-md rounded-3xl overflow-hidden border border-slate-200/60 hover-card reveal-item" style="animation-delay: 0ms;">
+                    <div class="p-10">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-serif font-bold text-brand-navy mb-1">Unit 1</h3>
+                                <p class="text-xs font-bold text-slate-600 uppercase tracking-wider">Insights & Preprocessing</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center text-blue-600 shadow-lg shadow-blue-100">
+                                <i data-lucide="database" class="w-6 h-6"></i>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-base leading-relaxed mb-8">
+                            Data exploration, visualization, and preprocessing fundamentals. Learn to clean, transform, and prepare datasets for machine learning models.
+                        </p>
+                        <a href="./units/#unit-1" class="text-xs font-semibold text-brand-navy hover:text-brand-blue flex items-center gap-1">
+                            Explore Unit <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Unit 2 -->
+                <div class="bg-white/90 backdrop-blur-md rounded-3xl overflow-hidden border border-slate-200/60 hover-card reveal-item" style="animation-delay: 100ms;">
+                    <div class="p-10">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-serif font-bold text-brand-navy mb-1">Unit 2</h3>
+                                <p class="text-xs font-bold text-slate-600 uppercase tracking-wider">Supervised Learning</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-50 to-indigo-100 flex items-center justify-center text-indigo-600 shadow-lg shadow-indigo-100">
+                                <i data-lucide="trending-up" class="w-6 h-6"></i>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-base leading-relaxed mb-8">
+                            Regression and classification models. Master decision trees, SVMs, ensemble methods, and model evaluation techniques.
+                        </p>
+                        <a href="./units/#unit-2" class="text-xs font-semibold text-brand-navy hover:text-brand-blue flex items-center gap-1">
+                            Explore Unit <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Unit 3 -->
+                <div class="bg-white/90 backdrop-blur-md rounded-3xl overflow-hidden border border-slate-200/60 hover-card reveal-item" style="animation-delay: 200ms;">
+                    <div class="p-10">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-serif font-bold text-brand-navy mb-1">Unit 3</h3>
+                                <p class="text-xs font-bold text-slate-600 uppercase tracking-wider">Unsupervised & NLP</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center text-purple-600 shadow-lg shadow-purple-100">
+                                <i data-lucide="brain" class="w-6 h-6"></i>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-base leading-relaxed mb-8">
+                            Clustering, dimensionality reduction, and NLP fundamentals. Explore pattern discovery and text processing techniques.
+                        </p>
+                        <a href="./units/#unit-3" class="text-xs font-semibold text-brand-navy hover:text-brand-blue flex items-center gap-1">
+                            Explore Unit <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Unit 4 -->
+                <div class="bg-white/90 backdrop-blur-md rounded-3xl overflow-hidden border border-slate-200/60 hover-card reveal-item" style="animation-delay: 300ms;">
+                    <div class="p-10">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-serif font-bold text-brand-navy mb-1">Unit 4</h3>
+                                <p class="text-xs font-bold text-slate-600 uppercase tracking-wider">Deep Learning</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-pink-50 to-pink-100 flex items-center justify-center text-pink-600 shadow-lg shadow-pink-100">
+                                <i data-lucide="zap" class="w-6 h-6"></i>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-base leading-relaxed mb-8">
+                            Neural networks, CNNs, and RNNs. Build and train deep learning models for image recognition and sequence processing.
+                        </p>
+                        <a href="./units/#unit-4" class="text-xs font-semibold text-brand-navy hover:text-brand-blue flex items-center gap-1">
+                            Explore Unit <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Unit 5 -->
+                <div class="bg-white/90 backdrop-blur-md rounded-3xl overflow-hidden border border-slate-200/60 hover-card reveal-item" style="animation-delay: 400ms;">
+                    <div class="p-10">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-serif font-bold text-brand-navy mb-1">Unit 5</h3>
+                                <p class="text-xs font-bold text-slate-600 uppercase tracking-wider">Advanced & Applications</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center text-green-600 shadow-lg shadow-green-100">
+                                <i data-lucide="rocket" class="w-6 h-6"></i>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-base leading-relaxed mb-8">
+                            Time series analysis, reinforcement learning, and real-world applications. Deploy and productionize ML systems.
+                        </p>
+                        <a href="./units/#unit-5" class="text-xs font-semibold text-brand-navy hover:text-brand-blue flex items-center gap-1">
+                            Explore Unit <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Microprojects Hub -->
+                <div class="bg-white/90 backdrop-blur-md rounded-3xl overflow-hidden border border-slate-200/60 hover-card reveal-item" style="animation-delay: 500ms;">
+                    <div class="p-10 flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-serif font-bold text-brand-navy mb-1">Microprojects</h3>
+                                <p class="text-xs font-bold text-slate-600 uppercase tracking-wider">Hands-On Learning</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-50 to-amber-100 flex items-center justify-center text-amber-600 shadow-lg shadow-amber-100">
+                                <i data-lucide="code" class="w-6 h-6"></i>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-base leading-relaxed mb-8">
+                            22 comprehensive microprojects across all units. Apply learning immediately with guided, real-world problem-solving tasks.
+                        </p>
+                        <div class="mt-auto">
+                            <a href="./practicals/" class="w-full block text-center py-3 bg-slate-100 hover:bg-slate-200 text-brand-navy font-bold rounded-lg transition-colors">
+                                View Microprojects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="py-32 bg-slate-900 relative overflow-hidden">
+        <!-- Background -->
+        <div class="absolute inset-0 -z-10">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+            <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-brand-blue/20 to-transparent rounded-full blur-[140px]"></div>
+            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-brand-indigo/20 to-transparent rounded-full blur-[140px]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">By The Numbers</h2>
+                <p class="text-slate-300 max-w-2xl mx-auto text-lg">A comprehensive, assessment-backed learning platform serving diploma and engineering students</p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 text-center hover:bg-white/15 transition-all">
+                    <div class="text-5xl md:text-6xl font-bold text-brand-blue mb-2">5</div>
+                    <p class="text-slate-300 font-medium">Complete Units</p>
+                    <p class="text-slate-400 text-xs mt-2">Comprehensive curriculum modules</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 text-center hover:bg-white/15 transition-all">
+                    <div class="text-5xl md:text-6xl font-bold text-brand-indigo mb-2">22</div>
+                    <p class="text-slate-300 font-medium">Microprojects</p>
+                    <p class="text-slate-400 text-xs mt-2">Hands-on practical applications</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 text-center hover:bg-white/15 transition-all">
+                    <div class="text-5xl md:text-6xl font-bold text-brand-purple mb-2">171</div>
+                    <p class="text-slate-300 font-medium">Students</p>
+                    <p class="text-slate-400 text-xs mt-2">Assessed & certified</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 text-center hover:bg-white/15 transition-all">
+                    <div class="text-5xl md:text-6xl font-bold text-brand-accent mb-2">100%</div>
+                    <p class="text-slate-300 font-medium">Completion</p>
+                    <p class="text-slate-400 text-xs mt-2">Track record of success</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gradient-to-r from-brand-navy via-brand-midnight to-brand-slate relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1440 300" preserveAspectRatio="none">
+                <defs>
+                    <pattern id="grid-cta" width="80" height="80" patternUnits="userSpaceOnUse">
+                        <path d="M 80 0 L 0 0 0 80" fill="none" stroke="white" stroke-width="1"/>
+                    </pattern>
+                </defs>
+                <rect width="1440" height="300" fill="url(#grid-cta)" />
+            </svg>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Ready to Master Machine Learning?</h2>
+            <p class="text-xl text-slate-300 mb-12 max-w-2xl mx-auto">Start your journey with MSBTE K-Scheme 316316. Access complete curriculum, hands-on projects, and professional resources.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <a href="./units/" class="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-brand-navy font-semibold text-base rounded-2xl hover:bg-slate-100 transition-all shadow-2xl shadow-black/30 hover:-translate-y-1">
+                    Explore All Units
+                    <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="https://github.com/CI-codesmith/ml-site" target="_blank" class="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-white/20 border-2 border-white text-white font-semibold text-base rounded-2xl hover:bg-white/30 transition-all hover:-translate-y-1">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                    View Repository
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer class="bg-slate-900 border-t border-white/10 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-blue to-brand-indigo flex items-center justify-center text-white font-bold text-sm">AI</div>
+                        <div>
+                            <h3 class="font-semibold text-white">MindforgeAI</h3>
+                            <p class="text-xs text-slate-400">By Chatake Innoworks</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm">Complete MSBTE K-Scheme machine learning curriculum for students</p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Curriculum</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./units/" class="text-slate-400 hover:text-white transition-colors text-sm">All Units</a></li>
+                        <li><a href="./practicals/" class="text-slate-400 hover:text-white transition-colors text-sm">Practicals</a></li>
+                        <li><a href="./assessments/" class="text-slate-400 hover:text-white transition-colors text-sm">Assessments</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./THEORY_NOTES.md" class="text-slate-400 hover:text-white transition-colors text-sm">Theory Notes</a></li>
+                        <li><a href="./SYLLABUS.md" class="text-slate-400 hover:text-white transition-colors text-sm">Syllabus</a></li>
+                        <li><a href="https://github.com/CI-codesmith/ml-site" class="text-slate-400 hover:text-white transition-colors text-sm">GitHub</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Organization</h4>
+                    <p class="text-slate-400 text-sm mb-2"><strong>Chatake Innoworks Pvt. Ltd.</strong></p>
+                    <p class="text-slate-400 text-sm">MindforgeAI Division</p>
+                    <a href="https://www.chatakeinnoworks.com/" class="text-brand-blue hover:text-brand-indigo text-sm">www.chatakeinnoworks.com</a>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-400 text-sm">&copy; 2025 Chatake Innoworks Pvt. Ltd. | All Rights Reserved</p>
+                <a href="https://github.com/CI-codesmith/ml-site" class="text-brand-blue hover:text-brand-indigo text-sm mt-4 md:mt-0">View on GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Icons Setup -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

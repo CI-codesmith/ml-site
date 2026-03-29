@@ -3,129 +3,132 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{{ site.description }}">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}MindforgeAI - Machine Learning Mastery</title>
+    <meta name="description" content="{{ site.description | default: 'Complete MSBTE K-Scheme machine learning curriculum' }}">
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
-    
-    <!-- Google Fonts - Premium Typography -->
+    <!-- Premium Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#0A1628',
+                            midnight: '#1A2332',
+                            blue: '#3B82F6',
+                            indigo: '#6366F1',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     
     <style>
-      :root {
-        --ci-primary: #1a1a2e;
-        --ci-secondary: #0f3460;
-        --ci-accent: #e94560;
-        --ci-light-accent: #f39c12;
-        --ci-text: #2c3e50;
-        --ci-light-text: #ecf0f1;
-      }
+        body {
+            background: linear-gradient(to bottom, #FFFFFF 0%, #F8FAFC 100%);
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
+        }
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+        }
     </style>
   </head>
   <body>
     <!-- Professional Navigation -->
-    <header class="site-header">
-      <div class="container nav-container">
-        <a href="{{ '/' | relative_url }}" class="site-title">
-          <i class="fas fa-brain"></i> MindforgeAI
+    <nav class="nav-glass fixed w-full top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <a href="{{ '/' | relative_url }}" class="flex items-center gap-3 no-underline">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-blue to-brand-indigo flex items-center justify-center text-white font-bold text-sm">AI</div>
+          <div class="flex flex-col">
+            <span class="font-semibold text-lg text-slate-900">MindforgeAI</span>
+            <span class="text-xs font-medium text-gray-500 uppercase">Chatake Innoworks</span>
+          </div>
         </a>
-        <nav class="site-nav">
-          <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a>
-          <a href="{{ '/units/' | relative_url }}" class="nav-link {% if page.url contains '/units' %}active{% endif %}">Units</a>
-          <a href="{{ '/practicals/' | relative_url }}" class="nav-link {% if page.url contains '/practicals' %}active{% endif %}">Practicals</a>
-          <a href="{{ '/assessments/' | relative_url }}" class="nav-link {% if page.url contains '/assessments' %}active{% endif %}">Assessments</a>
-          <a href="{{ '/resources/' | relative_url }}" class="nav-link {% if page.url contains '/resources' %}active{% endif %}">Resources</a>
-          <a href="https://github.com/CI-codesmith/ml-site" target="_blank" class="nav-link"><i class="fab fa-github"></i> GitHub</a>
-        </nav>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="{{ '/' | relative_url }}" class="text-xs font-medium text-slate-700 hover:text-brand-blue transition-colors no-underline">Home</a>
+          <a href="{{ '/units/' | relative_url }}" class="text-xs font-medium text-slate-700 hover:text-brand-blue transition-colors no-underline">Units</a>
+          <a href="{{ '/practicals/' | relative_url }}" class="text-xs font-medium text-slate-700 hover:text-brand-blue transition-colors no-underline">Practicals</a>
+          <a href="{{ '/assessments/' | relative_url }}" class="text-xs font-medium text-slate-700 hover:text-brand-blue transition-colors no-underline">Assessments</a>
+          <a href="https://github.com/CI-codesmith/ml-site" target="_blank" class="px-6 py-2.5 bg-slate-900 text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-all no-underline">
+            GitHub
+          </a>
+        </div>
       </div>
-    </header>
+    </nav>
 
     <!-- Main Content -->
-    <main class="page-content">
-      <div class="container">
-        {{ content }}
-      </div>
+    <main class="pt-20">
+      {{ content }}
     </main>
 
     <!-- Professional Footer -->
-    <footer class="site-footer">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>MindforgeAI Learning Hub</h3>
-          <p>Complete MSBTE K-SCHEME 316316 curriculum for modern machine learning engineers</p>
-          <div class="social-links">
-            <a href="https://github.com/CI-codesmith/ml-site" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.chatakeinnoworks.com/" target="_blank" title="Chatake Innoworks"><i class="fas fa-globe"></i></a>
+    <footer class="bg-slate-900 border-t border-white/10 py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-12 mb-12">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-blue to-brand-indigo flex items-center justify-center text-white font-bold text-sm">AI</div>
+              <div>
+                <h3 class="font-semibold text-white">MindforgeAI</h3>
+                <p class="text-xs text-slate-400">By Chatake Innoworks</p>
+              </div>
+            </div>
+            <p class="text-slate-400 text-sm">Complete MSBTE K-Scheme machine learning curriculum</p>
+          </div>
+
+          <div>
+            <h4 class="text-white font-semibold mb-4">Curriculum</h4>
+            <ul class="space-y-2">
+              <li><a href="{{ '/units/' | relative_url }}" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">All Units</a></li>
+              <li><a href="{{ '/practicals/' | relative_url }}" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Practicals</a></li>
+              <li><a href="{{ '/assessments/' | relative_url }}" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Assessments</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-white font-semibold mb-4">Resources</h4>
+            <ul class="space-y-2">
+              <li><a href="{{ '/THEORY_NOTES.md' | relative_url }}" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Theory Notes</a></li>
+              <li><a href="{{ '/SYLLABUS.md' | relative_url }}" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Syllabus</a></li>
+              <li><a href="https://github.com/CI-codesmith/ml-site" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">GitHub</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-white font-semibold mb-4">Organization</h4>
+            <p class="text-slate-400 text-sm mb-2"><strong>Chatake Innoworks Pvt. Ltd.</strong></p>
+            <p class="text-slate-400 text-sm">MindforgeAI Division</p>
+            <a href="https://www.chatakeinnoworks.com/" class="text-brand-blue hover:text-brand-indigo text-sm no-underline">www.chatakeinnoworks.com</a>
           </div>
         </div>
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <a href="{{ '/units/' | relative_url }}">All Units</a>
-          <a href="{{ '/practicals/' | relative_url }}">Practicals</a>
-          <a href="{{ '/assessments/' | relative_url }}">Assessments</a>
-          <a href="{{ '/resources/' | relative_url }}">Resources</a>
+
+        <!-- Footer Bottom -->
+        <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p class="text-slate-400 text-sm">&copy; 2025 Chatake Innoworks Pvt. Ltd. | All Rights Reserved</p>
+          <a href="https://github.com/CI-codesmith/ml-site" class="text-brand-blue hover:text-brand-indigo text-sm mt-4 md:mt-0 no-underline">View on GitHub</a>
         </div>
-        <div class="footer-section">
-          <h3>Resources</h3>
-          <a href="{{ '/THEORY_NOTES.md' | relative_url }}">Theory Notes</a>
-          <a href="{{ '/SYLLABUS.md' | relative_url }}">Syllabus</a>
-          <a href="{{ '/DEPLOYMENT.md' | relative_url }}">Deployment</a>
-          <a href="https://github.com/CI-codesmith/ml-site">Source Code</a>
-        </div>
-        <div class="footer-section">
-          <h3>Organization</h3>
-          <p><strong>Chatake Innoworks Pvt. Ltd.</strong></p>
-          <p>MindforgeAI Division</p>
-          <p><a href="https://www.chatakeinnoworks.com/">www.chatakeinnoworks.com</a></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="branding">Chatake Innoworks</div>
-        <p>&copy; 2025 Chatake Innoworks Pvt. Ltd. | All Rights Reserved | <a href="https://www.chatakeinnoworks.com/">Corporate Website</a></p>
       </div>
     </footer>
 
-    <style>
-      .nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .nav-link {
-        position: relative;
-        cursor: pointer;
-      }
-
-      .social-links {
-        display: flex;
-        gap: 1rem;
-        margin-top: 1rem;
-      }
-
-      .social-links a {
-        display: inline-flex;
-        width: 40px;
-        height: 40px;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.1);
-        color: var(--ci-light-text);
-        transition: all 0.3s ease;
-      }
-
-      .social-links a:hover {
-        background: var(--ci-accent);
-        color: white;
-      }
-    </style>
-  </body>
-</html>
+    <script>
+      lucide.createIcons();
+    </script>
