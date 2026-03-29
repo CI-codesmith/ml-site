@@ -65,11 +65,12 @@
 
         <div class="hidden md:flex items-center gap-8">
           <a href="{{ '/' | relative_url }}" class="text-xs font-medium text-slate-700 hover:text-brand-blue transition-colors no-underline">Home</a>
-          <a href="{{ '/units/' | relative_url }}" class="text-xs font-medium text-slate-700 hover:text-brand-blue transition-colors no-underline">Units</a>
-          <a href="{{ '/practicals/' | relative_url }}" class="text-xs font-medium text-slate-700 hover:text-brand-blue transition-colors no-underline">Practicals</a>
-          <a href="{{ '/assessments/' | relative_url }}" class="text-xs font-medium text-slate-700 hover:text-brand-blue transition-colors no-underline">Assessments</a>
-          <a href="https://github.com/CI-codesmith/ml-site" target="_blank" class="px-6 py-2.5 bg-slate-900 text-white text-xs font-semibold rounded-full hover:bg-slate-800 transition-all no-underline">
-            GitHub
+          <a href="{{ '/' | relative_url }}#units" class="text-xs font-medium text-slate-700 hover:text-brand-blue transition-colors no-underline">Units</a>
+          <a href="{{ '/' | relative_url }}#projects" class="text-xs font-medium text-slate-700 hover:text-brand-blue transition-colors no-underline">Projects</a>
+          <a href="https://internship.chatakeinnoworks.com/" target="_blank" class="text-xs font-medium text-slate-700 hover:text-brand-blue transition-colors no-underline">Internship</a>
+          <a href="https://github.com/CI-codesmith/ml-site" target="_blank" class="text-xs font-medium text-slate-700 hover:text-brand-blue transition-colors no-underline">GitHub</a>
+          <a href="/results/" class="px-6 py-2.5 bg-brand-blue text-white text-xs font-semibold rounded-full hover:bg-brand-indigo transition-all no-underline">
+            Student Login
           </a>
         </div>
       </div>
@@ -98,18 +99,20 @@
           <div>
             <h4 class="text-white font-semibold mb-4">Curriculum</h4>
             <ul class="space-y-2">
-              <li><a href="{{ '/units/' | relative_url }}" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">All Units</a></li>
-              <li><a href="{{ '/practicals/' | relative_url }}" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Practicals</a></li>
+              <li><a href="{{ '/' | relative_url }}#units" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">All Units</a></li>
+              <li><a href="{{ '/' | relative_url }}#practicals" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Practicals</a></li>
               <li><a href="{{ '/assessments/' | relative_url }}" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Assessments</a></li>
+              <li><a href="/results/" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Student Login</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 class="text-white font-semibold mb-4">Resources</h4>
+            <h4 class="text-white font-semibold mb-4">Featured Projects</h4>
             <ul class="space-y-2">
-              <li><a href="{{ '/THEORY_NOTES.md' | relative_url }}" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Theory Notes</a></li>
-              <li><a href="{{ '/SYLLABUS.md' | relative_url }}" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Syllabus</a></li>
-              <li><a href="https://github.com/CI-codesmith/ml-site" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">GitHub</a></li>
+              <li><a href="https://apollo-agriguard-ijaegxe.gamma.site/" target="_blank" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Apollo AgriGuard</a></li>
+              <li><a href="https://gfis.chatakeinnoworks.com/" target="_blank" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Green Fuel Intel</a></li>
+              <li><a href="https://nexora-be4467.webflow.io/" target="_blank" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Nexora Platform</a></li>
+              <li><a href="https://internship.chatakeinnoworks.com/" target="_blank" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Internship 2026</a></li>
             </ul>
           </div>
 
@@ -122,9 +125,13 @@
         </div>
 
         <!-- Footer Bottom -->
-        <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p class="text-slate-400 text-sm">&copy; 2025 Chatake Innoworks Pvt. Ltd. | All Rights Reserved</p>
-          <a href="https://github.com/CI-codesmith/ml-site" class="text-brand-blue hover:text-brand-indigo text-sm mt-4 md:mt-0 no-underline">View on GitHub</a>
+        <div class="border-t border-white/10 pt-8 text-center">
+          <p class="text-slate-400 text-sm">&copy; 2026 Chatake Innoworks Pvt. Ltd. | All Rights Reserved</p>
+          <div class="flex gap-4 justify-center mt-4">
+            <a href="https://github.com/CI-codesmith" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">GitHub</a>
+            <a href="https://www.chatakeinnoworks.com" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Corporate Website</a>
+            <a href="https://internship.chatakeinnoworks.com/" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Internship Portal</a>
+          </div>
         </div>
       </div>
     </footer>
