@@ -196,7 +196,8 @@ description: Access your machine learning course assessments and results
             
             const hash = await hashScorecardKey(firstName, lastName, rollNumber);
             // Redirect to scorecard
-            window.location.href = `/results/${hash}.html`;
+            const baseUrl = '{{ '/results/' | relative_url }}';
+            window.location.href = baseUrl + hash + '.html';
         } catch (error) {
             messageDiv.style.display = 'block';
             messageDiv.style.background = '#fee2e2';
