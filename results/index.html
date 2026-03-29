@@ -1,0 +1,134 @@
+---
+layout: default
+title: Student Assessment Results - MindforgeAI
+description: Access your machine learning course assessments and results
+---
+
+<section class="relative pt-32 pb-24 overflow-hidden">
+    <!-- Background -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-slate-50 via-white to-slate-50"></div>
+    
+    <!-- Decorative Elements -->
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-blue-100/40 to-transparent rounded-full blur-[140px] -z-10"></div>
+    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-100/40 to-transparent rounded-full blur-[140px] -z-10"></div>
+
+    <div class="max-w-4xl mx-auto px-6">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <div class="inline-flex items-center gap-2 px-4 py-2 mb-8 bg-white border border-slate-200 rounded-full shadow-sm">
+                <span class="h-2 w-2 bg-brand-blue rounded-full"></span>
+                <span class="text-xs font-bold text-slate-600 uppercase">Student Portal</span>
+            </div>
+            <h1 class="text-5xl lg:text-6xl font-serif font-bold text-brand-navy mb-6">
+                Assessment Results
+            </h1>
+            <p class="text-xl text-slate-700 max-w-2xl mx-auto">
+                Access your coursework, submissions, and performance metrics for the Machine Learning K-Scheme curriculum
+            </p>
+        </div>
+
+        <!-- Results Container -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <!-- Access Results -->
+            <div class="bg-white rounded-3xl p-10 border border-slate-200 hover:shadow-lg hover:border-blue-200 transition-all">
+                <div class="w-14 h-14 rounded-2xl bg-brand-blue/10 flex items-center justify-center text-brand-blue mb-6">
+                    <i data-lucide="clipboard-list" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-brand-navy mb-3">Your Results</h3>
+                <p class="text-slate-700 mb-6">
+                    View your assessment scores, unit-wise performance, and detailed feedback from instructors.
+                </p>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3 text-slate-600">
+                        <span class="text-sm">✓ Unit-wise Performance</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-600">
+                        <span class="text-sm">✓ Assessment History</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-600">
+                        <span class="text-sm">✓ Progress Overview</span>
+                    </div>
+                </div>
+                <a href="#" class="inline-block mt-8 px-6 py-3 bg-brand-blue text-white font-semibold rounded-lg hover:bg-brand-indigo transition-colors">
+                    View My Results
+                </a>
+            </div>
+
+            <!-- Course Progress -->
+            <div class="bg-white rounded-3xl p-10 border border-slate-200 hover:shadow-lg hover:border-blue-200 transition-all">
+                <div class="w-14 h-14 rounded-2xl bg-brand-blue/10 flex items-center justify-center text-brand-blue mb-6">
+                    <i data-lucide="trending-up" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-brand-navy mb-3">Course Progress</h3>
+                <p class="text-slate-700 mb-6">
+                    Track your learning journey across all 5 units and 22 microprojects with detailed analytics.
+                </p>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-sm font-medium text-slate-700">Overall Progress</span>
+                            <span class="text-sm font-bold text-brand-blue">85%</span>
+                        </div>
+                        <div class="w-full bg-slate-200 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-brand-blue to-brand-indigo h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <a href="{{ '/' | relative_url }}#units" class="inline-block mt-8 px-6 py-3 bg-brand-blue text-white font-semibold rounded-lg hover:bg-brand-indigo transition-colors">
+                    Continue Learning
+                </a>
+            </div>
+        </div>
+
+        <!-- Assessment Details -->
+        <div class="bg-gradient-to-r from-brand-navy to-brand-midnight rounded-3xl p-12 text-white">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center">
+                    <i data-lucide="file-check" class="w-8 h-8"></i>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold">171 Student Assessments</h3>
+                    <p class="text-blue-200">Complete evaluation framework across all units</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10">
+                    <h4 class="text-sm font-bold text-blue-200 uppercase mb-3">Unit Assessments</h4>
+                    <p class="text-3xl font-bold">35</p>
+                    <p class="text-sm text-blue-200 mt-2">Theory & Concept Tests</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10">
+                    <h4 class="text-sm font-bold text-blue-200 uppercase mb-3">Practical Labs</h4>
+                    <p class="text-3xl font-bold">22</p>
+                    <p class="text-sm text-blue-200 mt-2">Hands-On Projects</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10">
+                    <h4 class="text-sm font-bold text-blue-200 uppercase mb-3">Special Tests</h4>
+                    <p class="text-3xl font-bold">114</p>
+                    <p class="text-sm text-blue-200 mt-2">Quizzes & Assignments</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Need Help Section -->
+        <div class="mt-16 text-center">
+            <h3 class="text-2xl font-bold text-brand-navy mb-4">Need Help?</h3>
+            <p class="text-slate-700 mb-8 max-w-2xl mx-auto">
+                Contact your instructor or visit the Internship Portal for additional support and career guidance.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="{{ '/' | relative_url }}" class="px-8 py-3 bg-brand-blue text-white font-semibold rounded-lg hover:bg-brand-indigo transition-colors">
+                    Back to Home
+                </a>
+                <a href="https://internship.chatakeinnoworks.com/" target="_blank" class="px-8 py-3 border-2 border-brand-blue text-brand-blue font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-colors">
+                    Visit Internship Portal
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    lucide.createIcons();
+</script>
